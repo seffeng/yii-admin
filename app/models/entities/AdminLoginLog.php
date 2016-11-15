@@ -101,7 +101,7 @@ class AdminLoginLog extends ActiveRecord {
     public function attributeLabels() {
         return [
             'all_id'      => 'ID',
-            'ad_id'      => '管理员',
+            'ad_id'       => '管理员',
             'all_result'  => '结果',
             'all_content' => '内容',
             'all_addtime' => '时间',

@@ -70,7 +70,7 @@ $(document).ready(function(){
 function checkForm() {
     var _adg_name = $('#admingroup-adg_name').val();
     if (_adg_name == '') {
-        $('.field-admingroup-adg_name').removeClass('has-success').addClass('has-error').find('.help-block').text('用户名不能为空！');
+        $('.field-admingroup-adg_name').removeClass('has-success').addClass('has-error').find('.help-block').text('名称 不能为空！');
         return false;
     }
     $('.field-admingroup-adg_name').removeClass('has-error').addClass('has-success').find('.help-block').text('');

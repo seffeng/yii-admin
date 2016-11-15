@@ -119,14 +119,14 @@ function checkForm() {
     var _ad_username = $('#admin-ad_username').val();
     var _ai_name = $('#admininfo-ai_name').val();
     if (_ad_username == '') {
-        $('.field-admin-ad_username').removeClass('has-success').addClass('has-error').find('.help-block').text('用户名不能为空！');
-        return false;
-    }
-    if (_ai_name == '') {
-        $('.field-admininfo-ai_name').removeClass('has-success').addClass('has-error').find('.help-block').text('姓名不能为空！');
+        $('.field-admin-ad_username').removeClass('has-success').addClass('has-error').find('.help-block').text('用户名 不能为空！');
         return false;
     }
     $('.field-admin-ad_username').removeClass('has-error').addClass('has-success').find('.help-block').text('');
+    if (_ai_name == '') {
+        $('.field-admininfo-ai_name').removeClass('has-success').addClass('has-error').find('.help-block').text('姓名 不能为空！');
+        return false;
+    }
     $('.field-admininfo-ai_name').removeClass('has-error').addClass('has-success').find('.help-block').text('');
     return true;
 }

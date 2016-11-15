@@ -104,14 +104,14 @@ function checkForm() {
     var _mn_name = $('#menunav-mn_name').val();
     var _mn_url  = $('#menunav-mn_url').val();
     if (_mn_name == '') {
-        $('.field-menunav-mn_name').removeClass('has-success').addClass('has-error').find('.help-block').text('菜单名称不能为空！');
-        return false;
-    }
-    if (_mn_url == '') {
-        $('.field-menunav-mn_url').removeClass('has-success').addClass('has-error').find('.help-block').text('菜单地址不能为空！');
+        $('.field-menunav-mn_name').removeClass('has-success').addClass('has-error').find('.help-block').text('菜单名称 不能为空！');
         return false;
     }
     $('.field-menunav-mn_name').removeClass('has-error').addClass('has-success').find('.help-block').text('');
+    if (_mn_url == '') {
+        $('.field-menunav-mn_url').removeClass('has-success').addClass('has-error').find('.help-block').text('菜单地址 不能为空！');
+        return false;
+    }
     $('.field-menunav-mn_url').removeClass('has-error').addClass('has-success').find('.help-block').text('');
     return true;
 }

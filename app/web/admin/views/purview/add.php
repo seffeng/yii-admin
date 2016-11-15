@@ -71,14 +71,14 @@ function checkForm() {
     var _pv_name = $('#purview-pv_name').val();
     var _pv_key  = $('#purview-pv_key').val();
     if (_pv_name == '') {
-        $('.field-purview-pv_name').removeClass('has-success').addClass('has-error').find('.help-block').text('用户名 不能为空！');
-        return false;
-    }
-    if (_pv_key == '') {
-        $('.field-purview-pv_key').removeClass('has-success').addClass('has-error').find('.help-block').text('权限KEY 不能为空！');
+        $('.field-purview-pv_name').removeClass('has-success').addClass('has-error').find('.help-block').text('名称 不能为空！');
         return false;
     }
     $('.field-purview-pv_name').removeClass('has-error').addClass('has-success').find('.help-block').text('');
+    if (_pv_key == '') {
+        $('.field-purview-pv_key').removeClass('has-success').addClass('has-error').find('.help-block').text('KEY 不能为空！');
+        return false;
+    }
     $('.field-purview-pv_key').removeClass('has-error').addClass('has-success').find('.help-block').text('');
     return true;
 }

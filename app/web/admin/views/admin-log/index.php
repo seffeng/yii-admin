@@ -20,7 +20,7 @@ $this->params['breadcrumb'] = isset($breadcrumb) ? $breadcrumb : [];
     ]); ?>
         <div class="box-body">
             <?php
-                echo $form->field($formModel, 'ad_id');
+                echo $form->field($formModel, 'ad_id')->label('管理员ID');
                 echo $form->field($formModel, 'username', ['labelOptions' => ['class' => 'margin-left-20']]);
                 echo $form->field($formModel, 'name', ['labelOptions' => ['class' => 'margin-left-20']]);
                 echo $form->field($formModel, 'result', ['labelOptions' => ['class' => 'margin-left-20']])->dropDownList($resultText, ['class' => 'form-control']);

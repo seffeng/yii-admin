@@ -174,7 +174,7 @@ class AdminLog extends ActiveRecord {
     public function attributeLabels() {
         return [
             'al_id'      => 'ID',
-            'ad_id'      => '管理员ID',
+            'ad_id'      => '管理员',
             'al_result'  => '结果',
             'al_content' => '内容',
             'al_addtime' => '时间',
