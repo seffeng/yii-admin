@@ -36,11 +36,11 @@ class Controller extends WebController {
                         die(Json::encode(['r' => 0, 'm' => '身份验证失败，请重新登录！']));
                     }
                     $this->redirect(Yii::$app->getUser()->loginUrl);
-                    return FALSE;
+                    return TRUE;
                 }
                 if (!Yii::$app->request->isAjax && !in_array($actionId, $notOnlyAjax)) {
                     $this->goHome();
-                    return FALSE;
+                    return TRUE;
                 }
                 if (!in_array($controllerAction, $ignorePurview)) {
                     if (!PurviewService::checkPurview($controllerId, $actionId)) {

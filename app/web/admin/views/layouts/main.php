@@ -26,12 +26,15 @@ $web_url = Yii::getAlias('@web');
     <body class="hold-transition skin-blue sidebar-mini">
         <?php
             $this->beginBody();
-            $getMenuUrl = Url::to(['menu-nav/get-menu-nav']);
-            $this->registerJs(<<<js
+            $exception = Yii::$app->getErrorHandler()->exception;
+            if (!$exception) {
+                $getMenuUrl = Url::to(['menu-nav/get-menu-nav']);
+                $this->registerJs(<<<js
             var _menu_url = '{$getMenuUrl}';
             CLS_AJAX.set_url(_menu_url).set_call(function(_res){CLS_MENU.init(_res);}).send();    /*load-menu*/
 js
             );
+            }
         ?>
         <div class="alert-box"></div>
         <!-- Site wrapper -->
