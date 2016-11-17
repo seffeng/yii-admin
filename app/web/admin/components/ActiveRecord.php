@@ -1,9 +1,10 @@
 <?php
+/**
+ * 继承 ActiveRecord
+ */
 
 namespace zxf\web\admin\components;
 
-use zxf\components\ActiveRecordModel;
-
-class ActiveRecord extends ActiveRecordModel {
+class ActiveRecord extends \zxf\components\ActiveRecord {
 
 }

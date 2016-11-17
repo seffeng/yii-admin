@@ -3,7 +3,7 @@
 namespace zxf\models\entities;
 
 use Yii;
-use zxf\web\admin\components\ActiveRecord;
+use zxf\components\ActiveRecord;
 use zxf\models\services\FunctionService;
 use yii\helpers\ArrayHelper;
 use zxf\models\queries\AdminLoginLogQuery;

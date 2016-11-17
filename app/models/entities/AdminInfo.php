@@ -2,7 +2,7 @@
 
 namespace zxf\models\entities;
 
-use zxf\web\admin\components\ActiveRecord;
+use zxf\components\ActiveRecord;
 use zxf\models\services\ConstService;
 /**
  * 管理员信息

@@ -3,7 +3,7 @@
 namespace zxf\models\entities;
 
 use Yii;
-use zxf\web\admin\components\ActiveRecord;
+use zxf\components\ActiveRecord;
 use zxf\models\queries\MenuNavQuery;
 use zxf\models\services\ConstService;
 use zxf\models\services\FunctionService;

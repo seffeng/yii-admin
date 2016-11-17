@@ -4,7 +4,7 @@ namespace zxf\models\entities;
 
 use Yii;
 use zxf\models\queries\AdminQuery;
-use zxf\web\admin\components\ActiveRecord;
+use zxf\components\ActiveRecord;
 use yii\helpers\ArrayHelper;
 use yii\web\IdentityInterface;
 use zxf\models\services\AdminService;
