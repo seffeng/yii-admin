@@ -242,4 +242,32 @@ class FunctionService {
         }
         return $return;
     }
+
+    /**
+     * 截取字符串
+     * @author ZhangXueFeng
+     * @date   2016年11月17日
+     * @param: string 字符串
+     * @param: integer 位数
+     * @return string
+     */
+    public static function subString($name=NULL, $length=NULL){
+        $contactName = trim($name);
+        if(strlen($contactName) <= $length){
+            return $contactName;
+        }else{
+            $return = '';
+            $i = 0;
+            for(;$i < $length; $i++){
+                $tmpString = substr($contactName, $i, 1);
+                if(ord($tmpString) > 0xA0){    /* UTF-8中文字符占三个字节 */
+                    $return .= substr($contactName, $i, 3);
+                    $i += 2;
+                }else{
+                    $return .= $tmpString;
+                }
+            }
+            return $return.'...';
+        }
+    }
 }
