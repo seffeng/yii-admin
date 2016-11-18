@@ -37,7 +37,7 @@ class LoginAsset extends AssetBundle {
     ];
 
     public static function addScriptForIE($view) {
-        $view->registerJsFile('@web/static/js/html5shiv.min.js', ['condition' => 'lte IE9', 'position' => View::POS_HEAD, 'depends' => 'yii\web\JqueryAsset']);
-        $view->registerJsFile('@web/static/js/respond.min.js', ['condition' => 'lte IE9', 'position' => View::POS_HEAD, 'depends' => 'yii\web\JqueryAsset']);
+        $view->registerJsFile('@web/static/js/html5shiv.min.js', ['condition' => 'lte IE 9', 'position' => View::POS_HEAD, 'depends' => 'yii\web\JqueryAsset']);
+        $view->registerJsFile('@web/static/js/respond.min.js', ['condition' => 'lte IE 9', 'position' => View::POS_HEAD, 'depends' => 'yii\web\JqueryAsset']);
     }
 }
