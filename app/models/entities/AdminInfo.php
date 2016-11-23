@@ -4,6 +4,7 @@ namespace zxf\models\entities;
 
 use zxf\components\ActiveRecord;
 use zxf\models\services\ConstService;
+use zxf\models\services\FunctionService;
 /**
  * 管理员信息
  * @author ZhangXueFeng
@@ -46,7 +47,7 @@ class AdminInfo extends ActiveRecord {
         return [
             ['ai_name', 'required', 'message' => ConstService::ERROR_RULES_REQUIRE],
             [['ai_name', 'ai_email'], 'string', 'message' => ConstService::ERROR_RULES_FORMAT],
-            ['ai_phone', 'integer', 'message' => ConstService::ERROR_RULES_FORMAT],
+            ['ai_phone', 'checkAttribute'],
             ['ai_email', 'email', 'message' => ConstService::ERROR_RULES_FORMAT],
         ];
     }
@@ -58,7 +59,23 @@ class AdminInfo extends ActiveRecord {
      */
     public function beforeSave($insert) {
         $this->ai_lasttime = THIS_TIME;
-        $this->ai_phone    = intval($this->ai_phone);
         return parent::beforeSave($insert);
+    }
+
+    /**
+     * 字段检测
+     * @author ZhangXueFeng
+     * @date   2016年11月23日
+     * @param  string $attribute
+     */
+    public function checkAttribute($attribute) {
+        switch ($attribute) {
+            case 'ai_phone' : {
+                if (!FunctionService::checkData($this->ai_phone, 'mobile')) {
+                    $this->addError($attribute, '手机 格式错误！');
+                }
+                break;
+            }
+        }
     }
 }
