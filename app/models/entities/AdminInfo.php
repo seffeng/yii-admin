@@ -59,6 +59,7 @@ class AdminInfo extends ActiveRecord {
      */
     public function beforeSave($insert) {
         $this->ai_lasttime = THIS_TIME;
+        !$this->ai_phone && $this->ai_phone = 0;
         return parent::beforeSave($insert);
     }
 
