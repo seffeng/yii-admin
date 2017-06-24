@@ -51,7 +51,7 @@ class ActiveRecord extends \yii\db\ActiveRecord {
         $coulumn = [];
         if ($indexes) {
             foreach ($indexes as $val) {
-                $coulumn[$val['Column_name']] = $val['Column_name'];
+                $coulumn[$val['Key_name']] = $val['Key_name'];
             }
         }
         return $coulumn;
